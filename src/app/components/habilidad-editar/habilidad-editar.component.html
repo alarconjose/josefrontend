@@ -1,0 +1,29 @@
+<form class="px-5" (ngSubmit)="onUpdate()" #f="ngForm" novalidate *ngIf="isLogged" >
+  <div class="row">
+    <div class="col-6">
+      <div class="mb-1">
+        <label for="name" class="form-label fw-bold">Habilidad</label>
+        <input type="text" class="form-control" 
+        id="name"
+          name="name"
+          [(ngModel)]="habilidad.name"
+          required/>
+      </div>
+      <div class="mb-1">
+        <label for="value" class="form-label fw-bold">Porcentaje</label>
+        <input class="form-control" 
+        type="number"
+        id="value"
+          name="value"
+          [(ngModel)]="habilidad.value"
+          required/>
+          <div class="float-end mt-3">
+            <button type="submit" class="btn btn-dark">
+              <i class="fa-solid fa-rotate"></i>
+            </button>
+          </div>
+      </div>
+    </div>
+    <div class="col-6"></div>
+  </div>
+</form>

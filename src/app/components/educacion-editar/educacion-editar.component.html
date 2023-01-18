@@ -1,0 +1,83 @@
+<form class="px-5"  (ngSubmit)="onUpdate()"
+#f="ngForm" novalidate *ngIf="educacion && isLogged"
+> 
+
+  <div class="row">
+    <div class="col-6">
+      <div class="mb-1">
+        <label for="image" class="form-label fw-bold"
+          >Logo de la Institución</label
+        >
+        <input
+          class="form-control"
+          id="image"
+          name="image"
+          [(ngModel)]="educacion.image"
+          required
+        />
+      </div>
+      <div class="mb-1">
+        <label
+          for="school"
+          class="form-label fw-bold"
+          >Titulo Obtenido</label
+        >
+        <input type="text" class="form-control"
+        id="school"
+        name="school"
+        [(ngModel)]="educacion.school"
+        required />
+      </div>
+      <div class="mb-1">
+        <label
+          for="title"
+          class="form-label fw-bold"
+          >Titulo Obtenido</label
+        >
+        <input type="text" class="form-control"
+        id="title"
+        name="title"
+        [(ngModel)]="educacion.title"
+        required />
+      </div>
+      <div class="mb-1">
+        <label
+          for="date"
+          class="form-label- fw-bold"
+          >Periodo</label
+        >
+        <textarea
+          class="form-control"
+          id="date"
+          name="date"
+          [(ngModel)]="educacion.date"
+          required
+          rows="1"
+        ></textarea>
+      </div>
+      <div class="mb-1">
+        <label
+          for="description"
+          class="form-label fw-bold"
+          >Descripcion del titulo</label
+        >
+        <textarea
+          class="form-control"
+          id="description"
+          name="description"
+          [(ngModel)]="educacion.description"
+          required
+          rows="1"
+        ></textarea>
+        <div class="float-end mt-3">
+          <button type="submit" class="btn btn-dark">
+            <i class="fa-solid fa-rotate"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      
+    </div>
+  </div>
+</form>

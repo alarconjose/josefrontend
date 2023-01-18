@@ -1,1 +1,84 @@
-/* You can add global styles to this file, and also import other style files */
+
+nav {
+  border-radius: 2%;
+}
+.bg-black {
+  background-color: black;
+}
+.logoPrograma {
+  width:140px;
+  height:60px;
+}
+.bi.bi-twitter:hover {
+  background-color: blue;
+}
+.bi.bi-linkedin:hover {
+  background-color: blue;
+}
+.bi.bi-instagram:hover {
+  background-color: blue;
+}
+.banner {
+  border: 1px outset rgb(191, 220, 243);
+  background-color: rgba(231, 236, 240, 52%);
+  background-image: url(././assets/images/fondo.jpg);
+  background-size: cover;
+}
+.foto {
+  position: relative;
+  padding: 6px;
+  width: 180px;
+  height: 200px;
+  margin-top: 100px;
+  margin-left: 10px;
+  border-radius: 30%;
+}
+.titulo {
+  border: 1px outset rgb(191, 220, 243);
+  border-radius: 2%;
+  text-align: center;
+  background-color: rgb(185, 219, 247);
+}
+.container-fluid.cajon {
+  border: 1px outset rgb(191, 220, 243);
+  border-radius: 2%;
+  margin-bottom: 0.5%;
+}
+.progress {
+  margin-top: 6px;
+  margin-bottom: 3px;
+}
+.container-fluid.cajon:hover {
+  box-shadow: 3px 2px 3px;
+  transform-box: translateX(2%);
+}
+.fondo {
+  background-image: url("././assets/images/fondo.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+.box {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+  text-align: center;
+  backdrop-filter: blur(px);
+  -webkit-backdrop-filter: blur(px);
+}
+.fotoPanel {
+  height: 30%;
+  width: 100%;
+}
+.footer {
+  position: fixed;
+  bottom: 0px;
+  color: white;
+  text-align: center;
+}
+.list-group-item {
+  padding: .3rem 1rem !important;
+}
+.btn {
+  padding: .1rem .1rem;
+}
+
+

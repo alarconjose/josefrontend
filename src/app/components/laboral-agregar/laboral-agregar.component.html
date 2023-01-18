@@ -1,0 +1,76 @@
+<form class="px-5" (ngSubmit)="onCreate()" #f="ngForm" novalidate>
+  <div class="row">
+    <div class="col-6">
+      <div class="mb-1">
+        <label for="image" class="form-label fw-bold"
+          >Logo de la Empresa</label
+        >
+        <input
+          class="form-control"
+          type="text"
+          id="image"
+          name="image"
+          [(ngModel)]="image"
+          required
+        />
+      </div>
+      <div class="mb-1">
+        <label for="name" class="form-label fw-bold"
+          >Empresa</label
+        >
+        <input type="text" class="form-control"
+        id="name"
+        name="name"
+        [(ngModel)]="name"
+        required />
+      </div>
+      <div class="mb-1">
+        <label for="title" class="form-label fw-bold"
+          >Cargo</label
+        >
+        <input type="text" class="form-control"
+        id="title"
+        name="title"
+        [(ngModel)]="title"
+        required />
+      </div>
+      <div class="mb-1">
+        <label for="date" class="form-label fw-bold"
+          >Periodo</label
+        >
+        <textarea
+          class="form-control"
+          id="date"
+          name="date"
+          [(ngModel)]="date"
+          required
+          rows="1"
+        ></textarea>
+      </div>
+      <div class="mb-1">
+        <label
+          for="description"
+          class="form-label fw-bold"
+          >Descripcion del Cargo</label
+        >
+        <textarea
+          class="form-control"
+          id="description"
+          id="description"
+          name="description"
+          [(ngModel)]="description"
+          required
+          rows="1"
+        ></textarea>
+        <div>
+          <button type="submit" class="btn btn-dark">
+            Agregar
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <app-laboral></app-laboral>
+    </div>
+  </div>
+</form>

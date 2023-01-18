@@ -1,0 +1,51 @@
+    <div class="fondo" *ngIf="social && isLogged">
+      <form class="px-5 " (ngSubmit)="onUpdate()"
+      #fm="ngForm" novalidate>
+        <div class="mb-1">
+          <div class="row">
+            <div class="col-9">
+              <label for="image" class="form-label fw-bold"
+                > Imagen de Red Social</label
+              >
+      
+              <input
+                type="text"
+                class="form-control"
+                id="image"
+                name="image"
+                [(ngModel)]="social.image"
+                required
+                placeholder="Ingrese url de la imagen de red Social"
+              />
+  
+   
+            </div>
+            <div class="col-3"></div>
+              <div class="col-9">
+                <label for="image" class="form-label fw-bold"
+                  >Url de su Red Social</label
+                >
+                <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                [(ngModel)]="social.name"
+                required
+                placeholder="Ingrese url del su red social"
+              />
+                </div>
+                <div class="col-3"></div>
+  
+               
+                         <div class="float-end mt-3">
+                <button type="submit" class="btn btn-dark">
+                  <i class="fa-solid fa-rotate"></i>
+                </button>
+            </div>
+          </div>
+      
+      
+        </div>
+      </form>
+    </div>

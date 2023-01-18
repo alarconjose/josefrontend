@@ -1,0 +1,20 @@
+<li 
+class="btn btn-ligth" *ngFor="let social of navegadorItem">
+  <a [attr.href]="social.name" target="_blank">
+    <img class="logos" [src]="social.image" width="30" height="30" fill="currentColor" viewBox="0 0 30 30">
+  </a> 
+  <div *ngIf="isLogged" >
+    <button type="button" class="btn btn-dark"routerLink="/social-editar/{{
+      social.id
+    }}"
+  >
+  
+      <i class="fa-regular fa-pen-to-square"></i>
+    </button>
+    <button type="button" class="btn btn-dark"
+    (click)="delete(social.id)">
+      <i class="fa-regular fa-trash-can"></i>
+    </button>
+  </div>     
+</li> 
+

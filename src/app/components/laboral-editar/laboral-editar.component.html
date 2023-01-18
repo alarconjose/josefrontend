@@ -1,0 +1,79 @@
+<form class="px-5"  (ngSubmit)="onUpdate()"
+#fm="ngForm" novalidate 
+*ngIf="laboral && isLogged"
+> 
+<!--  -->
+  <div class="row">
+    <div class="col-6">
+      <div class="mb-1">
+        <label for="image" class="form-label fw-bold"
+          >Logo de la Empresa</label
+        >
+        <input
+          class="form-control"
+          type="text"
+          id="image"
+          name="image"
+          [(ngModel)]="laboral.image"
+          required
+        />
+      </div>
+      <div class="mb-1">
+        <label for="name" class="form-label fw-bold"
+          >Empresa</label
+        >
+        <input type="text" class="form-control"
+        id="name"
+        name="name"
+        [(ngModel)]="laboral.name"
+        required />
+      </div>
+      <div class="mb-1">
+        <label for="title" class="form-label fw-bold"
+          >Cargo</label
+        >
+        <input type="text" class="form-control"
+        id="title"
+        name="title"
+        [(ngModel)]="laboral.title"
+        required />
+      </div>
+      <div class="mb-1">
+        <label for="date" class="form-label fw-bold"
+          >Periodo</label
+        >
+        <textarea
+          class="form-control"
+          id="date"
+          name="date"
+          [(ngModel)]="laboral.date"
+          required
+          rows="1"
+        ></textarea>
+      </div>
+      <div class="mb-1">
+        <label
+          for="description"
+          class="form-label fw-bold"
+          >Descripcion del Cargo</label
+        >
+        <textarea
+          class="form-control"
+          id="description"
+          id="description"
+          name="description"
+          [(ngModel)]="laboral.description"
+          required
+          rows="1"
+        ></textarea>
+        <div class="float-end mt-3">
+          <button type="submit" class="btn btn-dark">
+            <i class="fa-solid fa-rotate"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+    </div>
+  </div>
+</form>

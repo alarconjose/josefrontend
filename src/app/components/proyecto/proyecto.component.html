@@ -1,0 +1,35 @@
+<!-- Proyectos-->
+<div class="container-fluid titulo">
+  <h4> Proyectos</h4>
+</div>
+<div class="container-fluid cajon" *ngFor="let proyecto of proyectos">
+
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-2">
+      <img [src]="proyecto.image" alt="logo" class="img-fluid" width="150px" height="200px"> 
+    </div>
+  <div class="col-8">
+    <h6>{{ proyecto.name }}</h6>
+    <h6>{{ proyecto.date}}</h6>
+    <h6>{{ proyecto.description }}</h6>
+    <h6>{{ proyecto.url }}</h6>
+  </div>
+  <div class="col-1"></div>
+</div>
+<div *ngIf="isLogged">
+  
+  <button type="button" class="btn btn-dark"routerLink="/proyecto-editar/{{
+    proyecto.id
+  }}">
+    <i class="fa-regular fa-pen-to-square"></i>
+  </button>
+  <button type="button" class="btn btn-dark"
+  (click)="delete(proyecto.id)">
+    <i class="fa-regular fa-trash-can"></i>
+  </button>
+</div>
+</div>
+
+
+

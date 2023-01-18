@@ -1,0 +1,276 @@
+<!--Navegacion con logo argentina programa  con logout-->
+<nav class="navbar bg-black">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/inicio">
+      <img
+        src="../assets/images/logoArgentinaPrograma.png"
+        class="logoPrograma img-fluid"
+        alt="logoArgentinaPrograma"
+      />
+    </a>
+    <ul class="list-inline">
+      <li class="list-inline-item">
+        <a class="btn btn-dark border-white"(click)="onLogout()" role="button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-door-closed"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M3 2a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v13h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V2zm1 13h8V2H4v13z"
+            />
+            <path d="M9 9a1 1 0 1 0 2 0 1 1 0 0 0-2 0z" />
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<body class="fondo">
+  <section>
+    <div class="container-fluid">
+      <!--Listado de opciones a modificar-->
+
+      <div class="row">
+        <div class="col-5 col-sm-4 col-md-3 col-lg-3 col-xl-2 col-xxl-2">
+          <img
+            [src]="miBanner.photo"
+            class="fotoPanel alig-center pt-1"
+            alt="fotografia"
+          />
+          <h1 class="fs-6 text-center box fw-bold">{{ miBanner.name }}</h1>
+          <h2 class="fs-5 text-center text-white">{{ miBanner.title }}</h2>
+          <div class="list-group" id="list-tab" role="tablist">
+            <!--Listado-->
+            <!--Redes-->
+            <a
+              class="list-group-item list-group-item-action active box text-start"
+              id="list-home-redes"
+              data-bs-toggle="list"
+              href="#list-redes"
+              role="tab"
+              aria-controls="list-redes"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-globe2"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z"
+                />
+              </svg>
+              Redes sociales
+            </a>
+            <a
+              class="list-group-item list-group-item-action box text-start"
+              id="list-banner-list"
+              data-bs-toggle="list"
+              href="#list-banner"
+              role="tab"
+              aria-controls="list-banner"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-exclamation-octagon"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M4.54.146A.5.5 0 0 1 4.893 0h6.214a.5.5 0 0 1 .353.146l4.394 4.394a.5.5 0 0 1 .146.353v6.214a.5.5 0 0 1-.146.353l-4.394 4.394a.5.5 0 0 1-.353.146H4.893a.5.5 0 0 1-.353-.146L.146 11.46A.5.5 0 0 1 0 11.107V4.893a.5.5 0 0 1 .146-.353L4.54.146zM5.1 1 1 5.1v5.8L5.1 15h5.8l4.1-4.1V5.1L10.9 1H5.1z"
+                />
+                <path
+                  d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"
+                />
+              </svg>
+              Banner
+            </a>
+            <a
+              class="list-group-item list-group-item-action box text-start"
+              id="list-laboral-list"
+              data-bs-toggle="list"
+              href="#list-laboral"
+              role="tab"
+              aria-controls="list-laboral"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-briefcase"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5z"
+                />
+              </svg>
+              Laboral
+            </a>
+            <a
+              class="list-group-item list-group-item-action box text-start"
+              id="list-experiencia-list"
+              data-bs-toggle="list"
+              href="#list-educacion"
+              role="tab"
+              aria-controls="list-educacion"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-journal-code"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M8.646 5.646a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 8 8.646 6.354a.5.5 0 0 1 0-.708zm-1.292 0a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0 0 .708l2 2a.5.5 0 0 0 .708-.708L5.707 8l1.647-1.646a.5.5 0 0 0 0-.708z"
+                />
+                <path
+                  d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"
+                />
+                <path
+                  d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"
+                />
+              </svg>
+              Educación
+            </a>
+            <a
+              class="list-group-item list-group-item-action box text-start"
+              id="list-habilidades-list"
+              data-bs-toggle="list"
+              href="#list-habilidades"
+              role="tab"
+              aria-controls="list-habilidades"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-magic"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M9.5 2.672a.5.5 0 1 0 1 0V.843a.5.5 0 0 0-1 0v1.829Zm4.5.035A.5.5 0 0 0 13.293 2L12 3.293a.5.5 0 1 0 .707.707L14 2.707ZM7.293 4A.5.5 0 1 0 8 3.293L6.707 2A.5.5 0 0 0 6 2.707L7.293 4Zm-.621 2.5a.5.5 0 1 0 0-1H4.843a.5.5 0 1 0 0 1h1.829Zm8.485 0a.5.5 0 1 0 0-1h-1.829a.5.5 0 0 0 0 1h1.829ZM13.293 10A.5.5 0 1 0 14 9.293L12.707 8a.5.5 0 1 0-.707.707L13.293 10ZM9.5 11.157a.5.5 0 0 0 1 0V9.328a.5.5 0 0 0-1 0v1.829Zm1.854-5.097a.5.5 0 0 0 0-.706l-.708-.708a.5.5 0 0 0-.707 0L8.646 5.94a.5.5 0 0 0 0 .707l.708.708a.5.5 0 0 0 .707 0l1.293-1.293Zm-3 3a.5.5 0 0 0 0-.706l-.708-.708a.5.5 0 0 0-.707 0L.646 13.94a.5.5 0 0 0 0 .707l.708.708a.5.5 0 0 0 .707 0L8.354 9.06Z"
+                />
+              </svg>
+              Habilidades
+            </a>
+            <a
+              class="list-group-item list-group-item-action box text-start"
+              id="list-proyectos-list"
+              data-bs-toggle="list"
+              href="#list-proyectos"
+              role="tab"
+              aria-controls="list-proyectos"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-window-dock"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M3.5 11a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Zm3.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm4.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Z"
+                />
+                <path
+                  d="M14 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h12ZM2 14h12a1 1 0 0 0 1-1V5H1v8a1 1 0 0 0 1 1ZM2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1H2Z"
+                />
+              </svg>
+              Proyectos
+            </a>
+          </div>
+        </div>
+
+        <!--Opciones Modificables-->
+
+        <div
+          class="col-7 col-sm-8 col-md-9 col-lg-9 col-xl-10 col-xxl-10 align-self-center"
+        >
+          <div class="box">
+            <div class="tab-content" id="nav-tabContent">
+              <!-- Modificacion de Redes Sociales-->
+
+              <div
+                class="tab-pane fade show active"
+                id="list-redes"
+                role="tabpanel"
+                aria-labelledby="list-redes-list"
+              >
+                <app-social-agregar></app-social-agregar>
+              </div>
+              <!--Modificacion de la seccion del Banner-->
+              <div
+                class="tab-pane fade"
+                id="list-banner"
+                role="tabpanel"
+                aria-labelledby="list-banner-list"
+              >
+   <app-banner></app-banner>
+              </div>
+              <!--Experiencia Laboral-->
+              <div
+                class="tab-pane fade"
+                id="list-laboral"
+                role="tabpanel"
+                aria-labelledby="list-laboral-list"
+              >
+                <div class="">
+                  <app-laboral-agregar></app-laboral-agregar>
+                </div>
+              </div>
+              <!--Educación-->
+              <div
+                class="tab-pane fade"
+                id="list-educacion"
+                role="tabpanel"
+                aria-labelledby="list-educacion-list"
+              >
+                <div class="">
+<app-educacion-agregar></app-educacion-agregar>
+                </div>
+              </div>
+              <!--Edición de Habilidades-->
+              <div
+                class="tab-pane fade"
+                id="list-habilidades"
+                role="tabpanel"
+                aria-labelledby="list-habilidades-list"
+              >
+                <div class="">
+      <app-habilidad-agregar></app-habilidad-agregar>
+                </div>
+              </div>
+              <!--Edición de Proyectos-->
+              <div
+                class="tab-pane fade"
+                id="list-proyectos"
+                role="tabpanel"
+                aria-labelledby="list-proyectos-list"
+              >
+                <div class="">
+                  <app-proyecto-agregar></app-proyecto-agregar>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <app-footer class="footer"> </app-footer>
+  </section>
+</body>

@@ -1,0 +1,31 @@
+<!--Experiencia Laboral-->
+<div class="container-fluid titulo">
+  <h4>Experiencia laboral</h4>
+</div>
+<div class="container-fluid cajon" *ngFor="let laboral of laborales">
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-2">
+      <img [src]="laboral.image" alt="logo Tech" class="img-fluid" width="150px" height="200px"> 
+    </div>
+    <div class="col-8">
+      <h6>{{ laboral.name }}</h6>
+      <h6>{{ laboral.title}}</h6>
+      <h6>{{ laboral.date}}</h6>
+      <h6>{{ laboral.description }}</h6>
+    </div>
+    <div class="col-1"></div>
+  </div>
+  <div *ngIf="isLogged">
+
+    <button type="button" class="btn btn-dark" routerLink="/laboral-editar/{{
+      laboral.id
+    }}">
+      <i class="fa-regular fa-pen-to-square"></i>
+    </button>
+    <button type="button" class="btn btn-dark"
+    (click)="delete(laboral.id)">
+      <i class="fa-regular fa-trash-can"></i>
+    </button>
+  </div>
+</div>

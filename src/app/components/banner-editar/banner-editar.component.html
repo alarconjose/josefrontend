@@ -1,0 +1,78 @@
+<form
+  class="px-5"
+ 
+  (ngSubmit)="onUpdate()"
+  #f="ngForm" novalidate *ngIf="banner && isLogged"
+> 
+  <div class="row">
+    <div class="col-6">
+      <div class="mb-1">
+        <label for="backImage" class="form-label fw-bold"
+          >Imagen de Banner</label
+        >
+        <input
+          class="form-control"
+          type="text"
+          name="backImage"
+          id="backImage"
+          required
+          [(ngModel)]="banner.backImage"
+        />
+      </div>
+      <div class="mb-1">
+        <label for="photo" class="form-label fw-bold">Foto de Perfil</label>
+        <input
+          class="form-control"
+          type="text"
+          name="photo"
+          id="photo"
+          required
+          [(ngModel)]="banner.photo"
+        />
+      </div>
+      <div class="mb-1">
+        <label for="title" class="form-label fw-bold">Titulo</label>
+        <input
+          type="text"
+          class="form-control"
+          name="title"
+          id="title"
+          required
+          [(ngModel)]="banner.title"
+        />
+      </div>
+      <div class="mb-1">
+        <label for="name" class="form-label fw-bold" type="text"
+          >Mi Nombre</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          name="name"
+          id="name"
+          required
+          [(ngModel)]="banner.name"
+        />
+      </div>
+      <div class="mb-1">
+        <label for="about" class="form-label fw-bold">Acerca de mi</label>
+        <textarea
+          class="form-control"
+          id="about"
+          rows="1"
+          type="text"
+          name="about"
+          id="about"
+          required
+          [(ngModel)]="banner.about"
+        ></textarea>
+        <div class="float-end mt-3">
+          <button type="submit" class="btn btn-dark">
+            <i class="fa-solid fa-rotate"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-6"></div>
+  </div>
+</form>

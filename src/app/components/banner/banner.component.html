@@ -1,0 +1,26 @@
+<!--Banner con foto e identificacion de Nombre-->
+<div
+  class="container-fluid banner"
+  [ngStyle]="{ 'background-image': 'url(' + miBanner.backImage + ')' }"
+>
+  <div class="row">
+    <div class="col-3">
+      <img [src]="miBanner.photo" class="foto img-fluid" alt="fotografia" />
+      <h1 class="nombrePerfil mx-2 text-white">{{ miBanner.name }}</h1>
+    </div>
+    <div class="col-9 text-center text-white">
+      <h2>{{ miBanner.title }}</h2>
+      <h3 class="fs-5">{{ miBanner.about }}</h3>
+    </div>
+    <div *ngIf="isLogged" >
+     
+      <button 
+        type="button"
+        class="btn btn-dark"
+        routerLink="/banner-editar/{{ miBanner.id }}"
+      >
+        <i class="fa-regular fa-pen-to-square"></i>
+      </button>
+    </div>
+  </div>
+</div>

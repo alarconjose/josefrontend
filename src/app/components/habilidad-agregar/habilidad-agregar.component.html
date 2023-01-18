@@ -1,0 +1,27 @@
+<form class="px-5" (ngSubmit)="onCreate()" #f="ngForm" novalidate>
+  <div class="row">
+    <div class="col-6">
+      <div class="mb-1">
+        <label for="name" class="form-label fw-bold">Habilidad</label>
+        <input type="text" class="form-control" 
+        id="name"
+          name="name"
+          [(ngModel)]="name"
+          required/>
+      </div>
+      <div class="mb-1">
+        <label for="value" class="form-label fw-bold">Porcentaje</label>
+        <input class="form-control" 
+        type="number"
+        id="value"
+          name="value"
+          [(ngModel)]="value"
+          required/>
+        <div>
+          <button type="submit" class="btn btn-dark">Agregar</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-6"><app-habilidad></app-habilidad></div>
+  </div>
+</form>

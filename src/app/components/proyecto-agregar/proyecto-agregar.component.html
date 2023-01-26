@@ -11,6 +11,7 @@
           [(ngModel)]="image"
           required
         />
+        <div [hidden]="f.valid || f.pristine" class="alert alert-danger">Requiere ingresar información</div>
       </div>
       <div class="mb-1">
         <label for="name" class="form-label fw-bold"
@@ -21,6 +22,7 @@
           name="name"
           [(ngModel)]="name"
           required />
+          <div [hidden]="f.valid || f.pristine" class="alert alert-danger">Requiere ingresar información</div>
       </div>
       <div class="mb-1">
         <label
@@ -36,6 +38,7 @@
           required 
           rows="1"
         ></textarea>
+        <div [hidden]="f.valid || f.pristine" class="alert alert-danger">Requiere ingresar información</div>
       </div>
       <div class="mb-1">
         <label
@@ -51,7 +54,7 @@
           required 
           rows="1"
         ></textarea>
-        <div></div>
+        <div [hidden]="f.valid || f.pristine" class="alert alert-danger">Requiere ingresar información</div>
       </div>
       <div class="mb-1">
         <label for="url" class="form-label fw-bold"
@@ -62,8 +65,9 @@
         name="url"
         [(ngModel)]="url"
         required />
+        <div [hidden]="f.valid || f.pristine" class="alert alert-danger">Requiere ingresar información</div>
         <div>
-          <button type="submit" class="btn btn-dark">
+          <button type="submit" class="btn btn-dark"  [disabled]="f.invalid">
             Agregar
           </button>
         </div>

@@ -12,6 +12,8 @@
           required
           placeholder="Ingrese url de la imagen de red Social"
         />
+        <div [hidden]="f.valid || f.pristine" class="alert alert-danger">Requiere ingresar información</div>
+
       </div>
       <div class="col-3"></div>
       <div class="col-9">
@@ -25,6 +27,7 @@
           required
           placeholder="Ingrese url del su red social"
         />
+        <div [hidden]="f.valid || f.pristine" class="alert alert-danger">Requiere ingresar información</div>
       </div>
       <div class="col-3">
         <app-social></app-social>
@@ -32,7 +35,7 @@
     </div>
 
     <div>
-      <button type="submit" class="btn btn-dark">Agregar</button>
+      <button type="submit" class="btn btn-dark"  [disabled]="f.invalid">Agregar</button>
     </div>
   </div>
 </form>

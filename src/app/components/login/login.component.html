@@ -34,13 +34,14 @@
                     required
                     [(ngModel)]="nombreUsuario"
                   />
+                  <div
+                    [hidden]="f.valid || f.pristine"
+                    class="alert alert-danger"
+                  >
+                    Requiere ingresar información
+                  </div>
                 </div>
-                <div
-                  [hidden]="f.valid || f.pristine"
-                  class="alert alert-danger"
-                >
-                  Requiere ingresar información
-                </div>
+
                 <div class="mb-3">
                   <label for="password" class="form-label">Contraseña</label>
                   <input
@@ -51,13 +52,14 @@
                     required
                     [(ngModel)]="password"
                   />
+                  <div
+                    [hidden]="f.valid || f.pristine"
+                    class="alert alert-danger"
+                  >
+                    Requiere ingresar información
+                  </div>
                 </div>
-                <div
-                  [hidden]="f.valid || f.pristine"
-                  class="alert alert-danger"
-                >
-                  Requiere ingresar información
-                </div>
+
                 <div class="modal-footer">
                   <button
                     type="submit"

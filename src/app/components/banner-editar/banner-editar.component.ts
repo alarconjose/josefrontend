@@ -10,8 +10,8 @@ import { TokenService } from 'src/app/servicios/token.service';
   styleUrls: ['./banner-editar.component.css']
 })
 export class BannerEditarComponent implements OnInit {
-isLogged = false;
- banner!: Banner;
+  isLogged = false;
+  banner!: Banner;
   constructor(private activatedRoute: ActivatedRoute, private bannerService: BannerService,
     private router: Router, private tokenService: TokenService) { }
 

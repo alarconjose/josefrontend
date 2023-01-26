@@ -10,7 +10,7 @@
     </a>
   </div>
 </nav>
-<body class="fondo">
+<body class="fondo-login">
   <section>
     <div class="container text-center">
       <div class="row">
@@ -35,6 +35,12 @@
                     [(ngModel)]="nombreUsuario"
                   />
                 </div>
+                <div
+                  [hidden]="f.valid || f.pristine"
+                  class="alert alert-danger"
+                >
+                  Requiere ingresar información
+                </div>
                 <div class="mb-3">
                   <label for="password" class="form-label">Contraseña</label>
                   <input
@@ -46,8 +52,20 @@
                     [(ngModel)]="password"
                   />
                 </div>
+                <div
+                  [hidden]="f.valid || f.pristine"
+                  class="alert alert-danger"
+                >
+                  Requiere ingresar información
+                </div>
                 <div class="modal-footer">
-                  <button type="submit" class="btn btn-dark">Ingresar</button>
+                  <button
+                    type="submit"
+                    class="btn btn-dark"
+                    [disabled]="f.invalid"
+                  >
+                    Ingresar
+                  </button>
                   <button
                     type="button"
                     class="btn btn-dark"

@@ -2,10 +2,7 @@
   <div class="mb-1">
     <div class="row">
       <div class="col-9">
-        <label for="image" class="form-label fw-bold"
-          >Red Social</label
-        >
-
+        <label for="image" class="form-label fw-bold">Imagen de Red Social</label>
         <input
           type="text"
           class="form-control"
@@ -15,31 +12,27 @@
           required
           placeholder="Ingrese url de la imagen de red Social"
         />
-        </div>
-        <div class="col-3"></div>
-        <div class="col-9">
-          <label for="image" class="form-label fw-bold"
-            >Red Social</label
-          >
+      </div>
+      <div class="col-3"></div>
+      <div class="col-9">
+        <label for="name" class="form-label fw-bold">Red Social</label>
         <input
           type="text"
           class="form-control"
           id="name"
-          name="image"
+          name="name"
           [(ngModel)]="name"
           required
           placeholder="Ingrese url del su red social"
         />
       </div>
       <div class="col-3">
-<app-social></app-social>
+        <app-social></app-social>
       </div>
     </div>
 
     <div>
-      <button type="submit" class="btn btn-dark">
-        Agregar
-      </button>
+      <button type="submit" class="btn btn-dark">Agregar</button>
     </div>
   </div>
 </form>

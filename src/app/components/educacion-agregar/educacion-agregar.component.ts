@@ -9,7 +9,6 @@ import { EducacionService } from 'src/app/servicios/educacion.service';
   styleUrls: ['./educacion-agregar.component.css']
 })
 export class EducacionAgregarComponent implements OnInit {
-  //isLogged=true;
 
 image: string= "";
 school: string= "";
@@ -29,7 +28,7 @@ description: string= "";
         window.location.reload(); 
       }, err => {
         alert('Error al cargar');
-        // this.cargarInfo();
+      
       }
     );  
 

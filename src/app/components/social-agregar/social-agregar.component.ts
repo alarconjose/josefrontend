@@ -9,9 +9,9 @@ import { SocialService } from 'src/app/servicios/social.service';
   styleUrls: ['./social-agregar.component.css']
 })
 export class SocialAgregarComponent implements OnInit {
+  
+  image: string ="";
   name: string ="";
-  image: string="";
-
   constructor(private socialService:SocialService, private router: Router) { }
 
   ngOnInit(): void {
@@ -20,6 +20,7 @@ export class SocialAgregarComponent implements OnInit {
     const social = new Social (this.name, this.image);
     this.socialService.save(social).subscribe(
       data => {
+        console.log(this.name, this.image)
         alert('Item agregado');
         window.location.reload();
       }, err => {

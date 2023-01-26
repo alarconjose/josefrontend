@@ -11,21 +11,19 @@ import { TokenService } from 'src/app/servicios/token.service';
 export class EducacionComponent implements OnInit {
 
   educaciones: Educacion[] = [];
-  isLogged= false;
+  isLogged = false;
 
-  constructor(private educacionService:EducacionService, private tokenService:TokenService) { }
+  constructor(private educacionService: EducacionService, private tokenService: TokenService) { }
 
   ngOnInit(): void {
     this.educacionService.list().subscribe(data => {
       this.educaciones = data;
-    }
-    
-  )
-  if(this.tokenService.getToken()){
-    this.isLogged = true;
+    })
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
     } else {
       this.isLogged = false;
-  }
+    }
   }
   delete(id?: number) {
     if (id != undefined) {
@@ -33,9 +31,9 @@ export class EducacionComponent implements OnInit {
         (data) => {
           alert('Item eliminado');
           this.ngOnInit();
-          
+
         },
-        (err) => {      
+        (err) => {
           alert('No se pudo eliminar');
         }
       );

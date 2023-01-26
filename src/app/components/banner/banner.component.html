@@ -12,9 +12,8 @@
       <h2>{{ miBanner.title }}</h2>
       <h3 class="fs-5">{{ miBanner.about }}</h3>
     </div>
-    <div *ngIf="isLogged" >
-     
-      <button 
+    <div *ngIf="isLogged">
+      <button
         type="button"
         class="btn btn-dark"
         routerLink="/banner-editar/{{ miBanner.id }}"

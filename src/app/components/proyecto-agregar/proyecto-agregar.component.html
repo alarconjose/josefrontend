@@ -2,6 +2,17 @@
   <div class="row">
     <div class="col-6">
       <div class="mb-1">
+        <label for="image" class="form-label fw-bold">Imagen del Proyecto</label>
+        <input
+          type="text"
+          class="form-control"
+          id="image"
+          name="image"
+          [(ngModel)]="image"
+          required
+        />
+      </div>
+      <div class="mb-1">
         <label for="name" class="form-label fw-bold"
           >Nombre del Proyecto</label
         >

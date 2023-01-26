@@ -10,20 +10,20 @@ import { TokenService } from 'src/app/servicios/token.service';
 })
 export class HabilidadComponent implements OnInit {
   habilidades: Habilidad[] = [];
-  isLogged=false;
+  isLogged = false;
 
-  constructor(private habilidadService:HabilidadService, private tokenService:TokenService) { }
+  constructor(private habilidadService: HabilidadService, private tokenService: TokenService) { }
 
   ngOnInit(): void {
     this.habilidadService.list().subscribe(data => {
       this.habilidades = data;
     }
-  )
-  if(this.tokenService.getToken()){
-    this.isLogged = true;
+    )
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
     } else {
       this.isLogged = false;
-  }
+    }
   }
   delete(id?: number) {
     if (id != undefined) {
@@ -31,9 +31,9 @@ export class HabilidadComponent implements OnInit {
         (data) => {
           alert('Item eliminado');
           this.ngOnInit();
-          
+
         },
-        (err) => {      
+        (err) => {
           alert('No se pudo eliminar');
         }
       );

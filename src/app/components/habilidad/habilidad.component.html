@@ -1,28 +1,39 @@
 <!--Habilidades en porcentajes-->
 <div class="container-fluid titulo">
-  <h4> Habilidades</h4>
-  </div>
-  <div class="container-fluid cajon" *ngFor="let habilidad of habilidades">
+  <h4>Habilidades</h4>
+</div>
+<div class="container-fluid cajon" *ngFor="let habilidad of habilidades">
   <div class="row">
     <div class="col-1"></div>
     <div class="col-10">
       <h6>{{ habilidad.name }}</h6>
       <div class="progress">
-        <div class="progress-bar" role="progressbar" aria-label="Example with label" [style.width]="habilidad.value+'%'" style="width: 75%;" [attr.aria-valuenow]="habilidad.value" aria-valuemin="0" aria-valuemax="100">{{ habilidad.value + "%"}}</div>
+        <div
+          class="progress-bar"
+          role="progressbar"
+          aria-label="Example with label"
+          [style.width]="habilidad.value + '%'"
+          style="width: 75%"
+          [attr.aria-valuenow]="habilidad.value"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          {{ habilidad.value + "%" }}
+        </div>
       </div>
     </div>
     <div class="col-1"></div>
   </div>
-  <div *ngIf="isLogged" >
-    
-    <button type="button" class="btn btn-dark" routerLink="/habilidad-editar/{{
-      habilidad.id
-    }}">
+  <div *ngIf="isLogged">
+    <button
+      type="button"
+      class="btn btn-dark"
+      routerLink="/habilidad-editar/{{ habilidad.id }}"
+    >
       <i class="fa-regular fa-pen-to-square"></i>
     </button>
-    <button type="button" class="btn btn-dark"
-    (click)="delete(habilidad.id)">
+    <button type="button" class="btn btn-dark" (click)="delete(habilidad.id)">
       <i class="fa-regular fa-trash-can"></i>
     </button>
   </div>
-  </div>
+</div>

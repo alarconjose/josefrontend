@@ -1,9 +1,13 @@
-<form class="px-5"  (ngSubmit)="onUpdate()"
-#f="ngForm" novalidate *ngIf="educacion && isLogged"
-class="fondo"
-> 
-
+<form
+  class="px-5"
+  (ngSubmit)="onUpdate()"
+  #f="ngForm"
+  novalidate
+  *ngIf="educacion && isLogged"
+  class="fondo"
+>
   <div class="row">
+    <div class="col-3"></div>
     <div class="col-6">
       <div class="mb-1">
         <label for="image" class="form-label fw-bold"
@@ -18,35 +22,29 @@ class="fondo"
         />
       </div>
       <div class="mb-1">
-        <label
-          for="school"
-          class="form-label fw-bold"
-          >Titulo Obtenido</label
-        >
-        <input type="text" class="form-control"
-        id="school"
-        name="school"
-        [(ngModel)]="educacion.school"
-        required />
+        <label for="school" class="form-label fw-bold">Institución</label>
+        <input
+          type="text"
+          class="form-control"
+          id="school"
+          name="school"
+          [(ngModel)]="educacion.school"
+          required
+        />
       </div>
       <div class="mb-1">
-        <label
-          for="title"
-          class="form-label fw-bold"
-          >Titulo Obtenido</label
-        >
-        <input type="text" class="form-control"
-        id="title"
-        name="title"
-        [(ngModel)]="educacion.title"
-        required />
+        <label for="title" class="form-label fw-bold">Titulo Obtenido</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          name="title"
+          [(ngModel)]="educacion.title"
+          required
+        />
       </div>
       <div class="mb-1">
-        <label
-          for="date"
-          class="form-label- fw-bold"
-          >Periodo</label
-        >
+        <label for="date" class="form-label- fw-bold">Periodo</label>
         <textarea
           class="form-control"
           id="date"
@@ -57,9 +55,7 @@ class="fondo"
         ></textarea>
       </div>
       <div class="mb-1">
-        <label
-          for="description"
-          class="form-label fw-bold"
+        <label for="description" class="form-label fw-bold"
           >Descripcion del titulo</label
         >
         <textarea
@@ -77,8 +73,6 @@ class="fondo"
         </div>
       </div>
     </div>
-    <div class="col-6">
-      
-    </div>
+    <div class="col-3"></div>
   </div>
 </form>

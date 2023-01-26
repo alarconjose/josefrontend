@@ -2,9 +2,7 @@
   <div class="row">
     <div class="col-6">
       <div class="mb-1">
-        <label for="image" class="form-label fw-bold"
-          >Logo de la Empresa</label
-        >
+        <label for="image" class="form-label fw-bold">Logo de la Empresa</label>
         <input
           class="form-control"
           type="text"
@@ -14,30 +12,33 @@
           required
         />
       </div>
+      <div [hidden]="f.valid || f.pristine" class="alert alert-danger">Requiere ingresar información</div>
       <div class="mb-1">
-        <label for="name" class="form-label fw-bold"
-          >Empresa</label
-        >
-        <input type="text" class="form-control"
-        id="name"
-        name="name"
-        [(ngModel)]="name"
-        required />
+        <label for="name" class="form-label fw-bold">Empresa</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          name="name"
+          [(ngModel)]="name"
+          required
+        />
       </div>
+      <div [hidden]="f.valid || f.pristine" class="alert alert-danger">Requiere ingresar información</div>
       <div class="mb-1">
-        <label for="title" class="form-label fw-bold"
-          >Cargo</label
-        >
-        <input type="text" class="form-control"
-        id="title"
-        name="title"
-        [(ngModel)]="title"
-        required />
+        <label for="title" class="form-label fw-bold">Cargo</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          name="title"
+          [(ngModel)]="title"
+          required
+        />
       </div>
+      <div [hidden]="f.valid || f.pristine" class="alert alert-danger">Requiere ingresar información</div>
       <div class="mb-1">
-        <label for="date" class="form-label fw-bold"
-          >Periodo</label
-        >
+        <label for="date" class="form-label fw-bold">Periodo</label>
         <textarea
           class="form-control"
           id="date"
@@ -47,10 +48,9 @@
           rows="1"
         ></textarea>
       </div>
+      <div [hidden]="f.valid || f.pristine" class="alert alert-danger">Requiere ingresar información</div>
       <div class="mb-1">
-        <label
-          for="description"
-          class="form-label fw-bold"
+        <label for="description" class="form-label fw-bold"
           >Descripcion del Cargo</label
         >
         <textarea
@@ -62,10 +62,9 @@
           required
           rows="1"
         ></textarea>
+        <div [hidden]="f.valid || f.pristine" class="alert alert-danger">Requiere ingresar información</div>
         <div>
-          <button type="submit" class="btn btn-dark">
-            Agregar
-          </button>
+          <button type="submit" class="btn btn-dark" [disabled]="f.invalid">Agregar</button>
         </div>
       </div>
     </div>

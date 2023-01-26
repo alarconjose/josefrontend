@@ -19,12 +19,12 @@ export class BannerService {
     return this.httpClient.get<Banner>(this.URL + `detail/${id}`)
   }
 
-  public save(Banner: Banner): Observable<any> {
-    return this.httpClient.post<any>(this.URL + 'create', Banner);
+  public save(banner: Banner): Observable<any> {
+    return this.httpClient.post<any>(this.URL + 'create', banner);
   }
 
-  public update(id: number, Banner: Banner): Observable<any> {
-    return this.httpClient.put<any>(this.URL + `update/${id}`, Banner);
+  public update(id: number, banner: Banner): Observable<any> {
+    return this.httpClient.put<any>(this.URL + `update/${id}`, banner);
   }
 
   public delete(id: number): Observable<any> {

@@ -13,36 +13,33 @@
           required
         />
       </div>
+      <div [hidden]="f.valid || f.pristine" class="alert alert-danger">Requiere ingresar información</div>
       <div class="mb-1">
-        <label
-          for="school"
-          class="form-label fw-bold"
-          >Titulo Obtenido</label
-        >
-        <input type="text" class="form-control"
-        id="school"
-        name="school"
-        [(ngModel)]="school"
-        required />
+        <label for="school" class="form-label fw-bold">Institución</label>
+        <input
+          type="text"
+          class="form-control"
+          id="school"
+          name="school"
+          [(ngModel)]="school"
+          required
+        />
       </div>
+      <div [hidden]="f.valid || f.pristine" class="alert alert-danger">Requiere ingresar información</div>
       <div class="mb-1">
-        <label
-          for="title"
-          class="form-label fw-bold"
-          >Titulo Obtenido</label
-        >
-        <input type="text" class="form-control"
-        id="title"
-        name="title"
-        [(ngModel)]="title"
-        required />
+        <label for="title" class="form-label fw-bold">Titulo Obtenido</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          name="title"
+          [(ngModel)]="title"
+          required
+        />
       </div>
+      <div [hidden]="f.valid || f.pristine" class="alert alert-danger">Requiere ingresar información</div>
       <div class="mb-1">
-        <label
-          for="date"
-          class="form-label- fw-bold"
-          >Periodo</label
-        >
+        <label for="date" class="form-label- fw-bold">Periodo</label>
         <textarea
           class="form-control"
           id="date"
@@ -52,10 +49,9 @@
           rows="1"
         ></textarea>
       </div>
+      <div [hidden]="f.valid || f.pristine" class="alert alert-danger">Requiere ingresar información</div>
       <div class="mb-1">
-        <label
-          for="description"
-          class="form-label fw-bold"
+        <label for="description" class="form-label fw-bold"
           >Descripcion del titulo</label
         >
         <textarea
@@ -66,10 +62,9 @@
           required
           rows="1"
         ></textarea>
+        <div [hidden]="f.valid || f.pristine" class="alert alert-danger">Requiere ingresar información</div>
         <div class="d-inline">
-          <button type="submit" class="btn btn-dark">
-            Agregar
-          </button>
+          <button type="submit" class="btn btn-dark" [disabled]="f.invalid">Agregar</button>
         </div>
       </div>
     </div>

@@ -1,11 +1,13 @@
 <form
   class="px-5"
- 
   (ngSubmit)="onUpdate()"
-  #f="ngForm" novalidate *ngIf="banner && isLogged"
+  #f="ngForm"
+  novalidate
+  *ngIf="banner && isLogged"
   class="fondo"
-> 
+>
   <div class="row">
+    <div class="col-3"></div>
     <div class="col-6">
       <div class="mb-1">
         <label for="backImage" class="form-label fw-bold"
@@ -74,6 +76,6 @@
         </div>
       </div>
     </div>
-    <div class="col-6"></div>
+    <div class="col-3"></div>
   </div>
 </form>

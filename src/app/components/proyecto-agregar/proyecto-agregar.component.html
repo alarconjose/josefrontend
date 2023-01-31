@@ -1,6 +1,6 @@
-<form class="px-5" (ngSubmit)="onCreate()" #f="ngForm" novalidate>
+<form (ngSubmit)="onCreate()" #f="ngForm" novalidate>
   <div class="row">
-    <div class="col-6">
+    <div class="col">
       <div class="mb-1">
         <label for="image" class="form-label fw-bold">Imagen del Proyecto</label>
         <input
@@ -73,6 +73,6 @@
         </div>
       </div>
     </div>
-    <div class="col-6"><app-proyecto></app-proyecto></div>
+    <div class="col"><app-proyecto></app-proyecto></div>
   </div>
 </form>

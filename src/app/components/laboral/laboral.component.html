@@ -5,10 +5,10 @@
 <div class="container-fluid cajon" *ngFor="let laboral of laborales">
   <div class="row">
     <div class="col-1"></div>
-    <div class="col-2">
-      <img [src]="laboral.image" alt="logo Tech" class="img-fluid" width="150px" height="200px"> 
+    <div class="col-4">
+      <img [src]="laboral.image" class="img-fluid" alt="logo Tech" width="150px" height="200px"> 
     </div>
-    <div class="col-8">
+    <div class="col-6 text-center">
       <h6>{{ laboral.name }}</h6>
       <h6>{{ laboral.title}}</h6>
       <h6>{{ laboral.date}}</h6>

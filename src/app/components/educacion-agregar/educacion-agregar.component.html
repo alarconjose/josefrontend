@@ -1,6 +1,6 @@
-<form class="px-5" (ngSubmit)="onCreate()" #f="ngForm" novalidate>
+<form (ngSubmit)="onCreate()" #f="ngForm" novalidate>
   <div class="row">
-    <div class="col-6">
+    <div class="col">
       <div class="mb-1">
         <label for="image" class="form-label fw-bold"
           >Logo de la Institución</label
@@ -68,7 +68,7 @@
         </div>
       </div>
     </div>
-    <div class="col-6">
+    <div class="col">
       <app-educacion></app-educacion>
     </div>
   </div>

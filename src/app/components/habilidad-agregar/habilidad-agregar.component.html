@@ -1,6 +1,6 @@
-<form class="px-5" (ngSubmit)="onCreate()" #f="ngForm" novalidate>
+<form (ngSubmit)="onCreate()" #f="ngForm" novalidate>
   <div class="row">
-    <div class="col-6">
+    <div class="col">
       <div class="mb-1">
         <label for="name" class="form-label fw-bold">Habilidad</label>
         <input
@@ -29,6 +29,6 @@
         </div>
       </div>
     </div>
-    <div class="col-6"><app-habilidad></app-habilidad></div>
+    <div class="col"><app-habilidad></app-habilidad></div>
   </div>
 </form>

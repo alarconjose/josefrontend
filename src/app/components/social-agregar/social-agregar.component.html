@@ -1,7 +1,7 @@
-<form class="px-5" (ngSubmit)="onCreate()" #f="ngForm" novalidate>
+<form  (ngSubmit)="onCreate()" #f="ngForm" novalidate>
   <div class="mb-1">
     <div class="row">
-      <div class="col-9">
+      <div class="col-10">
         <label for="image" class="form-label fw-bold">Imagen de Red Social</label>
         <input
           type="text"
@@ -15,8 +15,8 @@
         <div [hidden]="f.valid || f.pristine" class="alert alert-danger">Requiere ingresar información</div>
 
       </div>
-      <div class="col-3"></div>
-      <div class="col-9">
+      <div class="col"></div>
+      <div class="col-10">
         <label for="name" class="form-label fw-bold">Red Social</label>
         <input
           type="text"
@@ -29,7 +29,7 @@
         />
         <div [hidden]="f.valid || f.pristine" class="alert alert-danger">Requiere ingresar información</div>
       </div>
-      <div class="col-3">
+      <div class="col">
         <app-social></app-social>
       </div>
     </div>

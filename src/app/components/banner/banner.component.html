@@ -4,11 +4,11 @@
   [ngStyle]="{ 'background-image': 'url(' + miBanner.backImage + ')' }"
 >
   <div class="row">
-    <div class="col-3">
+    <div class="col">
       <img [src]="miBanner.photo" class="foto img-fluid" alt="fotografia" />
       <h1 class="nombrePerfil mx-2 text-white">{{ miBanner.name }}</h1>
     </div>
-    <div class="col-9 text-center text-white">
+    <div class="col text-center text-white text-wrap">
       <h2>{{ miBanner.title }}</h2>
       <h3 class="fs-5">{{ miBanner.about }}</h3>
     </div>

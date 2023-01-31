@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class LaboralService {
 
-  URL = "http://localhost:8080/" + 'laboral/';
+  URL = "https://portfoliojose.onrender.com/" + 'laboral/';
 
   constructor(private httpClient: HttpClient) { }
   public list(): Observable<Laboral[]> { 

@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SocialService {
-  URL = "http://localhost:8080/" + 'social/';
+  URL = "https://portfoliojose.onrender.com/" + 'social/';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -19,12 +19,12 @@ export class SocialService {
     return this.httpClient.get<Social>(this.URL + `detail/${id}`)
   }
 
-  public save(Social: Social): Observable<any> {
-    return this.httpClient.post<any>(this.URL + 'create', Social);
+  public save(social: Social): Observable<any> {
+    return this.httpClient.post<any>(this.URL + 'create', social);
   }
 
-  public update(id: number, Social: Social): Observable<any> {
-    return this.httpClient.put<any>(this.URL + `update/${id}`, Social);
+  public update(id: number, social: Social): Observable<any> {
+    return this.httpClient.put<any>(this.URL + `update/${id}`, social);
   }
 
   public delete(id: number): Observable<any> {

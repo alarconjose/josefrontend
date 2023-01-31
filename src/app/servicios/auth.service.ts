@@ -10,7 +10,7 @@ import { DtoJwt } from '../model/dto-jwt';
 })
 export class AuthService {
 
-  URL = "http://localhost:8080/" + 'auth/';
+  URL = "https://portfoliojose.onrender.com/" + 'auth/';
 
   constructor(private httpClient: HttpClient, private tokenService: TokenService) { }
 

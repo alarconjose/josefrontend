@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProyectoService {
-  URL = "http://localhost:8080/" + 'proyecto/';
+  URL = "https://portfoliojose.onrender.com/" + 'proyecto/';
 
   constructor(private httpClient: HttpClient) { }
 
